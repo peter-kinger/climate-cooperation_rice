@@ -1,0 +1,12 @@
+seed: 42
+iterations: 100
+num_cpus: 2
+env:
+  num_discrete_action_levels: 10
+  negotiation_on: false
+training:
+  train_batch_size: 400
+  minibatch_size: 128
+  num_epochs: 5
+  lr: 0.0005
+  gamma: 0.92

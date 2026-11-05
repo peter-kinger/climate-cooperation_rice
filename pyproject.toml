@@ -1,0 +1,27 @@
+[project]
+name = "rice-rllib-cpu"
+version = "0.1.0"
+description = "RICE-N CPU multi-agent climate cooperation research"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "ray[rllib]==2.40.0",
+  "torch==2.5.1",
+  "numpy==1.26.4",
+  "pyarrow==17.0.0",
+  "PyYAML==6.0.2",
+  "matplotlib==3.9.4",
+  "pandas==2.2.3",
+  "pytest==8.3.5",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

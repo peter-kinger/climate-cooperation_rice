@@ -1,171 +1,138 @@
-# Competition: Fostering Global Cooperation to Mitigate Climate Change
+# RICE-N：RLlib CPU 独立版
 
-[![PyTorch 1.9.0](https://img.shields.io/badge/PyTorch-1.9.0-ee4c2c?logo=pytorch&logoColor=white%22)](https://pytorch.org/docs/1.12/)
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-3713/)
-[![Warp drive 1.7.0](https://img.shields.io/badge/warp_drive-1.7.0-blue.svg)](https://github.com/salesforce/warp-drive/)
-[![Ray 1.0.0](https://img.shields.io/badge/ray[rllib]-1.0.0-blue.svg)](https://docs.ray.io/en/latest/index.html)
-[![Paper](http://img.shields.io/badge/paper-arxiv.2208.07004-B31B1B.svg)](https://arxiv.org/abs/2208.07004)
-[![Code Tutorial](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mila-iqia/climate-cooperation-competition/blob/main/Colab_Tutorial.ipynb)
+本项目模拟多个地区的储蓄、减排、贸易与气候谈判，并使用共享策略的多智能体强化学习训练决策。仅保留 CPU 路径，支持 Windows PowerShell 与 uv。
 
-<a href="https://www.kaggle.com/kernels/fork-version/105300459"><img src="https://www.kaggle.com/static/images/site-logo.svg" align="left" height="40" width="40" ></a>(Code Tutorial Notebook on Kaggle with free GPU available)
+## 与原版的区别
 
+- 保留 `rice.py`、`rice_helpers.py` 中的模型方程、地区参数、地区字典排序和效用奖励。
+- Gym 改为 Gymnasium；适配新版 RLlib 的 reset/step 接口。
+- 原版 Ray 1.0/A2C 改为固定 Ray 2.40/PPO，网络采用两层 128 单元 Tanh，保留动作掩码。因此本版不是原版 A2C 训练结果的直接复现。
+- 所有地区共享一个策略网络，各地区观察中包含地区标识。
+- 删除 CUDA、WarpDrive、Docker、旧 Notebook、竞赛提交与远程测试下载流程。
 
-This is the code respository for the competition on modeling global cooperation in the RICE-N Integrated Assessment Model. This competition is co-organized by MILA and Salesforce Research.
+## 一键跑完整流程
 
-The RICE-N IAM is an agent-based model that incorporates DICE climate-economic dynamics and multi-lateral negotiation protocols between several fictitious nations.
-
-In this competition, you will design negotiation protocols and contracts between nations. You will use the simulation and agents to evaluate their impact on the climate and the economy. 
-
-We recommend that GPU users use ``warp_drive`` and CPU users use ``rllib``.
-
-## Tutorial
-- For all information and the leaderboard, see [our official website](https://www.ai4climatecoop.org).
-- [How to Get Started](getting_started.ipynb)
-- [Code Tutorial Notebook with **free GPU**](https://colab.research.google.com/github/mila-iqia/climate-cooperation-competition/blob/main/Colab_Tutorial.ipynb)
-- [Code Kaggle Tutorial Notebook with **free GPU**](https://www.kaggle.com/kernels/fork-version/105300459)
-
-## Resources
-- For the mathematical background and scientific references, please see [the white paper](https://deliverypdf.ssrn.com/delivery.php?ID=579098091025080122123095015088114126057046084059055038121023114094110112070107123088059057002107022006023123122016086089001013042072002040020075022078097115093071118048047053064022064117095120085074022123010099031092026025094015125094099080071097079070&EXT=pdf&INDEX=TRUE).
-- Other free GPU resources: [Baidu Paddle](https://aistudio.baidu.com/), [MegStudio](https://studio.brainpp.com/)
-
-
-## Installation
-
-Notice: we recommend using `Linux` or `MacOS`. For Windows users, we recommend to use virtual machine running `Ubuntu 20.04` or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install).
-
-You can get a copy of the code by cloning the repo using Git: 
-
-```
-git clone https://github.com/mila-iqia/climate-cooperation-competition
-cd climate-cooperation-competition
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run_all.ps1 -RunDir runs/quickstart -Iterations 1
 ```
 
-As an alternative, one can also use:
+依次安装环境、测试、短训练、从磁盘加载评估、绘图。正式训练可将 `-Iterations` 改为 100 或更多。输出目录必须尚不存在。
 
-```
-git clone https://e.coding.net/ai4climatecoop/ai4climatecoop/climate-cooperation-competition.git
-cd climate-cooperation-competition
-```
+## 1. 创建本地环境
 
-We recommend using a virtual environment (such as provided by ```virtualenv``` or Anaconda).
+在项目根目录运行（目录有空格，请使用引号）：
 
-You can install the dependencies using pip:
-
-```
-pip install -r requirements.txt
+```powershell
+Set-Location -LiteralPath 'F:\BaiduSyncdisk-mu\Project ITP\tool-for-scientific-research\1_RICE_N_original\climate-cooperation_rice'
+uv sync --locked
 ```
 
-## Get Started
-Then run the getting started Jupyter notebook, by starting Jupyter:
+uv 自动选择 Python 3.10，并创建项目内 `.venv`。Torch 从官方 CPU 源安装；无需 CUDA。无需手动激活环境，后续命令使用 `uv run`。首次安装需要联网。
 
-```
-jupyter notebook
-``` 
+## 2. 测试模型
 
-and then navigating to [getting_started.ipynb](getting_started.ipynb).
-
-It provides a quick walkthrough for registering for the competition and creating a valid submission.
-
-
-## Training with reinforcement learning
-
-RL agents can be trained using the RICE-N simulation using one of these two frameworks:
-
-1. [RLlib](https://docs.ray.io/en/latest/rllib/index.html#:~:text=RLlib%20is%20an%20open%2Dsource,large%20variety%20of%20industry%20applications): The pythonic environment can be trained on your local CPU machine using open-source RL framework, RLlib.
-2. [WarpDrive](https://github.com/salesforce/warp-drive): WarpDrive is a GPU-based framework that allows for [over 10x faster training](https://arxiv.org/pdf/2108.13976.pdf) compared to CPU-based training. It requires the simulation to be written out in CUDA C, and we also provide a starter version of the simulation environment written in CUDA C ([rice_step.cu](rice_step.cu))
-
-We also provide starter scripts to train the simulation you build with either of the above frameworks.
-
-Note that we only allow these two options, since our backend submission evaluation process only supports these at the moment.
-
-
-For training with RLlib, `rllib (1.0.0)`, `torch (1.9.0)` and `gym (0.21)` packages are required.
-
-
-
-For training with WarpDrive, the `rl-warp-drive (>=1.6.5)` package is needed.
-
-Note that these requirements are automatically installed (or updated) when you run the corresponding training scripts.
-
-
-## Docker image (for GPU users)
-
-We have also provided a sample dockerfile for your reference. It mainly uses a Nvidia PyTorch base image, and installs the `pycuda` package as well. Note: `pycuda` is only required if you would like to train using WarpDrive.
-
-
-## Docker image (for CPU users)
-
-Thanks for the contribution from @muxspace. We also have an end-to-end docker environment ready for CPU users. Please refer to [README_CPU.md](README_CPU.md) for more details.
-
-# Customizing and running the simulation
-
-See the [Colab_Tutorial.ipynb](Tutorial.ipynb). [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mila-iqia/climate-cooperation-competition/blob/main/Colab_Tutorial.ipynb) for details. 
-
-It provides examples on modifying the code to implement different negotiation protocols. It describes ways of changing the agent observations and action spaces corresponding to the proposed negotiation protocols and implementing the negotiation logic in the provided code. 
-
-The notebook has a walkthrough of how to train RL agents with the simulation code and how to visualize results from the simulation after running it with a set of agents.
-
-For those who have **limited access to Colab**, please try to use [**free GPUs on Kaggle**](https://www.kaggle.com/kernels/fork-version/105300459). Please notice that Kaggle platform requires mobile phone verification to be able to access the GPUs. One may find the **settings** to get GPUs and internet connect on the right hand side after clicking on the link above and login.
-
-# Training RL agents in your simulation
-
-Once you build your simulation, you can use either of the following scripts to perform training.
-
-- [train_with_rllib.py](/scripts/train_with_rllib.py): this script performs end-to-end training with RLlib. The experiment run configuration will be read in from [rice_rllib.yaml](/scripts/rice_rllib.yaml), which contains the environment configuration, logging and saving settings and the trainer and policy network parameters. The duration of training can be set via the `num_episodes` parameter. We have also provided an initial implementation of a linear PyTorch policy model in [torch_models.py](/scripts/torch_models.py). You can [add other policy models](https://docs.ray.io/en/latest/rllib/rllib-concepts.html) you wish to use into that file.
-
-USAGE: The training script (with RLlib) is invoked using (from the root directory)
-```commandline
-    python scripts/train_with_rllib.py
+```powershell
+uv run pytest -q
 ```
 
-- [train_with_warp_drive.py](/scripts/train_with_warp_drive.py): this script performs end-to-end training with WarpDrive. The experiment run configuration will be read in from [rice_warpdrive.yaml](/scripts/rice_warpdrive.yaml). Currently, WarpDrive just supports the Advantage Actor-Critic (A2C) and the Proximal Policy Optimization (PPO) algorithms, and the fully-connected policy model.
+测试分别跑完关闭谈判的 20 步与开启谈判的 60 步，并检查动作约束、观察空间、奖励有限性与结束年份。
 
-USAGE: The training script (with WarpDrive) is invoked using
-```commandline
-    python scripts/train_with_warpdrive.py
+## 3. 训练
+
+先做一次短训练，确认流程：
+
+```powershell
+uv run python -m rllib_cpu.train --iterations 1 --output runs/demo
 ```
 
-As training progresses, some key metrics (such as the mean episode reward) are printed on screen for your reference. At the end of training, a zipped submission file is automatically created and saved for your reference. The zipped file essentially comprises the following
+正式训练：
 
-- An identifier file (`.rllib` or `.warpdrive`) indicating which framework was used towards training.
-- The environment files - [rice.py](rice.py) and [rice_helpers.py](rice_helpers.py).
-- A copy of the yaml configuration file ([rice_rllib.yaml](/scripts/rice_rllib.yaml) or [rice_warpdrive.yaml](/scripts/rice_warpdrive.yaml)) used for training.
-- PyTorch policy model(s) (of type ".state_dict") containing the trained weights for the policy network(s). Only the trained policy model for the final timestep will be copied over into the submission zip. If you would like to instead submit the trained policy model at a different timestep, please see the section below on creating your submission file.
-- For submissions using WarpDrive, the submission will also contain CUDA-specific files [rice_step.cu](rice_step.cu) and [rice_cuda](rice_cuda.py) that were used for training.
-
-
-# Contributing
-
-We are always looking for contributors from various domains to help us make this simulation more realistic. 
-
-If there are bugs or corner cases, please open a PR detailing the issue and consider submitting to Track 3!
-
-
-# Citation
-
-To cite this code, please use the information in [CITATION.cff](CITATION.cff) and the following bibtex entry:
-
-```
-@software{Zhang_RICE-N_2022,
-author = {Zhang, Tianyu and Srinivasa, Sunil and Williams, Andrew and Phade, Soham and Zhang, Yang and Gupta, Prateek and Bengio, Yoshua and Zheng, Stephan},
-month = {7},
-title = {{RICE-N}},
-url = {https://github.com/mila-iqia/climate-cooperation-competition},
-version = {1.0.0},
-year = {2022}
-}
-
-@misc{https://doi.org/10.48550/arxiv.2208.07004,
-  doi = {10.48550/ARXIV.2208.07004},
-  url = {https://arxiv.org/abs/2208.07004},
-  author = {Zhang, Tianyu and Williams, Andrew and Phade, Soham and Srinivasa, Sunil and Zhang, Yang and Gupta, Prateek and Bengio, Yoshua and Zheng, Stephan},
-  title = {AI for Global Climate Cooperation: Modeling Global Climate Negotiations, Agreements, and Long-Term Cooperation in RICE-N},  
-  publisher = {arXiv},
-  year = {2022}
-}
-
+```powershell
+uv run python -m rllib_cpu.train --config configs/cpu.yaml --output runs/experiment01
 ```
 
-# License
+每次使用新的输出目录，避免覆盖已有实验。默认 100 次 PPO 迭代；`--iterations` 可覆盖配置。所有环境采样在本地进程运行，GPU 数量固定为 0。
 
-For license information, see ```LICENSE.txt```.
+## 4. 重新加载与评估
+
+训练结束后，可关闭终端，再在新终端进入项目执行：
+
+```powershell
+uv run python -m rllib_cpu.evaluate --run runs/demo --episodes 1
+```
+
+这会从磁盘重新加载完整 RLlib checkpoint，再运行环境；不会继续训练。默认选择确定性动作。多次确定性评估通常得到相同轨迹；需要策略采样差异时使用：
+
+```powershell
+uv run python -m rllib_cpu.evaluate --run runs/demo --episodes 5 --explore
+```
+
+重复评估会覆盖该目录的评估表和 summary。checkpoint 采用运行目录下的相对位置，整个运行文件夹可移动。仅加载自己信任的模型文件。
+
+## 5. 绘图分析
+
+```powershell
+uv run python -m rllib_cpu.plot --run runs/demo
+```
+
+输出：
+
+| 文件 | 内容 |
+|---|---|
+| config.yaml | 本次训练的实际配置 |
+| checkpoint/ | 完整 RLlib 模型与优化器检查点 |
+| checkpoint_path.txt | 保存时的检查点位置，仅供参考 |
+| training.csv | 每次训练的环境步数与平均回合奖励 |
+| evaluation.csv | 各年份全球气温、碳、产出、消费、减排、福利 |
+| regions.csv | 各地区逐年经济、人口、资本、效用、减排 |
+| trajectory_000.npz | 包含谈判步骤和初始状态的原始数组 |
+| summary.json | 评估摘要与内部地区 ID 对应的参数文件顺序 |
+| analysis.png | 全球气候经济六面板图 |
+| regional_mitigation.png | 各地区减排率曲线 |
+| training.png | 训练奖励曲线 |
+
+评估表只保留初始状态与真正推进经济年份的步骤，避免把谈判步骤当作新增年份。初始时刻的产出、消费等流量由原模型初始化为零。温度表示模型温度异常值；经济量保留模型单位，不自行转换为现实货币。
+
+短训练只证明软件流程可运行，不证明策略已收敛。比较谈判制度时，应分别训练、使用多个随机种子，并保持训练预算一致；不得仅凭单次奖励曲线得出合作机制有效的结论。
+
+## 配置
+
+编辑 `configs/cpu.yaml`：
+
+- `seed`：训练随机种子。
+- `iterations`：训练迭代数。
+- `num_cpus`：Ray CPU 资源和 Torch 线程数。
+- `env.negotiation_on`：是否开启“提案→接受/拒绝→经济气候模拟”。
+- `env.num_discrete_action_levels`：动作离散档位。
+- `training.train_batch_size`：每次训练的环境步数，所有地区共享策略。
+- `training.minibatch_size`、`num_epochs`、`lr`、`gamma`：PPO 批量、更新轮数、学习率和折扣率。
+
+`region_yamls/default.yml` 设置起始年份 2015、每经济步骤 5 年、20 个经济步骤。地区 `.yml` 覆盖默认参数。地区文件按字符串排序加载，因此内部 ID 不等于文件编号，不要重命名文件来重新排序。
+
+## 文件结构与逻辑
+
+```text
+configs/cpu.yaml       训练与环境配置
+region_yamls/          全球与地区校准参数
+rice.py               原始气候经济与谈判模拟
+rice_helpers.py       经济气候公式与参数读取
+rllib_cpu/
+  env.py              Gymnasium 多智能体环境适配
+  model.py            共享 actor/critic 与动作掩码
+  runtime.py          CPU Ray 运行时与 PPO 配置
+  train.py            训练、指标记录与检查点保存
+  evaluate.py         模型重新加载、轨迹导出与评估摘要
+  plot.py             CSV 结果可视化
+ tests/test_env.py     环境和谈判约束测试
+run_all.ps1           Windows 一键完整运行
+pyproject.toml        直接依赖与 CPU Torch 源
+uv.lock               精确依赖锁定
+```
+
+调用流程：参数 → Rice.reset → 地区观察 → 共享策略选择动作 → Rice.step → 更新经济/贸易/排放/气候 → 地区效用奖励 → PPO 更新。实际奖励为当期地区效用；折现社会福利另行记录。
+
+## 来源与许可证
+
+基于 MILA / Salesforce 的 RICE-N climate-cooperation-competition。原始许可证及引用信息保存在 `LICENSE.txt` 与 `CITATION.cff`。原版文件可通过 Git 的原分支查看；当前分支是 CPU 整理版。
+
+本机验证记录见 [docs/verification.md](docs/verification.md)。

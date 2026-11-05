@@ -13,7 +13,7 @@ import os
 import sys
 
 import numpy as np
-from gym.spaces import MultiDiscrete
+from gymnasium.spaces import MultiDiscrete
 
 _PUBLIC_REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path = [_PUBLIC_REPO_DIR] + sys.path
@@ -1056,7 +1056,7 @@ class Rice:
                 production,
                 land_emissions,
             )
-            aux_m_all_regions[region_id] = aux_m
+            aux_m_all_regions[region_id] = np.asarray(aux_m).item()
 
         # Update carbon mass
         const = constants[0]
@@ -1215,7 +1215,8 @@ class Rice:
         if region_id is None:
             self.global_state[key]["value"][timestep] = value
         else:
-            self.global_state[key]["value"][timestep, region_id] = value
+            target = self.global_state[key]["value"]
+            target[timestep, region_id] = value.item() if np.ndim(target[timestep, region_id]) == 0 else value
 
     def get_global_state(self, key=None, timestep=None, region_id=None):
         assert key in self.global_state, f"Invalid key '{key}' in global state!"
