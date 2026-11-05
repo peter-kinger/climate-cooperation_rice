@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1770" viewBox="0 0 1440 1770">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#68788b" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<path d="M820.0,180.0 L900.0,180.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="160.0" width="32" height="19" fill="white" />
+<text x="866.0" y="174.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M820.0,367.5 L900.0,367.5" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="347.5" width="32" height="19" fill="white" />
+<text x="866.0" y="361.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,235.0 L430.0,295.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M820.0,555.0 L900.0,555.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="535.0" width="32" height="19" fill="white" />
+<text x="866.0" y="549.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,440.0 L430.0,500.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M820.0,742.5 L900.0,742.5" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="722.5" width="32" height="19" fill="white" />
+<text x="866.0" y="736.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,610.0 L430.0,670.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M820.0,935.0 L900.0,935.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="915.0" width="32" height="19" fill="white" />
+<text x="866.0" y="929.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,815.0 L430.0,875.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M820.0,1125.0 L900.0,1125.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="1105.0" width="32" height="19" fill="white" />
+<text x="866.0" y="1119.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,995.0 L430.0,1055.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M820.0,1310.0 L900.0,1310.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="863.0" y="1290.0" width="32" height="19" fill="white" />
+<text x="866.0" y="1304.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">对应</text>
+<path d="M430.0,1195.0 L430.0,1255.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<text x="40.0" y="38.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" font-weight="bold" fill="#25364b">04 / 论文 Activity Component → 实际函数</text>
+<text x="40.0" y="88.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">主体：rice.py:650 climate_and_economy_simulation_step()；右列为 rice_helpers.py 中的公式函数。</text>
+<rect x="40.0" y="125.0" width="780.0" height="110.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="162.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">0. 输入与时钟 / rice.py:657–763</text>
+<text x="56.0" y="186.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">activity_timestep += 1；解析储蓄、减排、贸易动作</text>
+<text x="56.0" y="210.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">读取旧状态；生成外生强迫与土地排放</text>
+<rect x="900.0" y="125.0" width="500.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="174.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_exogenous_emissions() : 62</text>
+<text x="916.0" y="198.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_land_emissions() : 67</text>
+<rect x="40.0" y="295.0" width="780.0" height="145.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="337.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">1. 各地区生产与进口预算 / 765–881</text>
+<text x="56.0" y="361.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">减排成本系数 → 气候损失保留系数 → 减排成本比例</text>
+<text x="56.0" y="385.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">生产 → 可用产出 → 投资；账户先计息</text>
+<text x="56.0" y="409.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">按本地区产出与债务约束缩减进口需求</text>
+<rect x="900.0" y="295.0" width="500.0" height="145.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="337.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_mitigation_cost() : 57</text>
+<text x="916.0" y="361.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_damages() : 77；get_abatement_cost() : 82</text>
+<text x="916.0" y="385.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_production() : 72；get_gross_output() : 87</text>
+<text x="916.0" y="409.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_investment() : 93</text>
+<rect x="40.0" y="500.0" width="780.0" height="110.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="537.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">2. 按出口方供给缩减贸易 / 883–908</text>
+<text x="56.0" y="561.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">最大出口 = min(出口比例 × 产出, 产出 − 投资)</text>
+<text x="56.0" y="585.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">超过出口能力时，按比例缩减进口矩阵的对应列</text>
+<rect x="900.0" y="500.0" width="500.0" height="110.0" rx="10" fill="#eaf7ef" stroke="#62a37c" stroke-width="1.4" />
+<text x="916.0" y="537.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_max_potential_exports() : 105</text>
+<text x="916.0" y="561.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">进口矩阵 X[i,j]：i 从 j 进口</text>
+<text x="916.0" y="585.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">行和 = 进口；列和 = 出口</text>
+<rect x="40.0" y="670.0" width="780.0" height="145.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="700.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">3. 消费、效用与账户 / 911–1011</text>
+<text x="56.0" y="724.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">此前关税 → 进口消费品与税收记录</text>
+<text x="56.0" y="748.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">国内消费 = 产出 − 投资 − 出口</text>
+<text x="56.0" y="772.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">国内 / 国外商品聚合 → 效用；reward = utility</text>
+<text x="56.0" y="796.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">计息余额 + 年长 × (出口 − 进口)</text>
+<rect x="900.0" y="670.0" width="500.0" height="145.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="712.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_consumption() : 98</text>
+<text x="916.0" y="736.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_armington_agg() : 174</text>
+<text x="916.0" y="760.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_utility() : 160</text>
+<text x="916.0" y="784.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_social_welfare() : 169</text>
+<rect x="40.0" y="875.0" width="780.0" height="120.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="905.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">4. 更新全球气候 / 1013–1072</text>
+<text x="56.0" y="929.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">旧温度 + 旧碳储量 + 外生强迫 → 新温度</text>
+<text x="56.0" y="953.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">各地区排放 = 旧强度 × (1 − 减排率) × 生产 + 土地排放</text>
+<text x="56.0" y="977.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">旧碳储量 + 所有地区排放 → 新碳储量</text>
+<rect x="900.0" y="875.0" width="500.0" height="120.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="917.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_global_temperature() : 117</text>
+<text x="916.0" y="941.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_aux_m() : 126</text>
+<text x="916.0" y="965.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_global_carbon_mass() : 131</text>
+<rect x="40.0" y="1055.0" width="780.0" height="140.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="1083.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">5. 更新下一期生产条件 / 1074–1149</text>
+<text x="56.0" y="1107.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">资本折旧 + 本期投资 → 新资本</text>
+<text x="56.0" y="1131.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">人口增长方程 → 新人口</text>
+<text x="56.0" y="1155.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">生产率增长路径 → 新生产率</text>
+<text x="56.0" y="1179.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">排放强度变化路径 → 新排放强度</text>
+<rect x="900.0" y="1055.0" width="500.0" height="140.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="1095.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">get_capital_depreciation() : 112</text>
+<text x="916.0" y="1119.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_capital() : 136；get_labor() : 141</text>
+<text x="916.0" y="1143.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_production_factor() : 146</text>
+<text x="916.0" y="1167.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_carbon_intensity() : 153</text>
+<rect x="40.0" y="1255.0" width="780.0" height="110.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="1292.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">6. 保存并返回 / 1151–1168</text>
+<text x="56.0" y="1316.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">保存本次关税供后续使用；生成新观察</text>
+<text x="56.0" y="1340.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">current_year += xDelta；返回 obs, reward, done, info</text>
+<rect x="900.0" y="1255.0" width="500.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="916.0" y="1292.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">generate_observation() / rice.py:378</text>
+<text x="916.0" y="1316.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">set_global_state() / rice.py:1170</text>
+<text x="916.0" y="1340.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_global_state() / rice.py:1221</text>
+<rect x="40.0" y="1430.0" width="1360.0" height="235.0" rx="10" fill="#f4f2f8" stroke="#9a8fb0" stroke-width="1.4" />
+<text x="56.0" y="1469.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">读图时需要区分：</text>
+<text x="56.0" y="1493.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">① 论文每个 for each region 都是遍历地区，不是推进一年；代码为数据依赖而分成多个循环。</text>
+<text x="56.0" y="1517.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">② damages 是损失后的产出保留比例；abatement_cost 是减排成本比例，不是货币金额。</text>
+<text x="56.0" y="1541.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">③ 本期气候损失用旧温度；新温度用旧碳储量；本期排放先影响新碳储量，之后再传导至温度。</text>
+<text x="56.0" y="1565.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">④ 论文图 production factor ← f(capital) 与代码不符：实际依赖旧生产率、增长参数和时间。</text>
+<text x="56.0" y="1589.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">⑤ 税收虽被记录，但当前账户余额更新没有另外加上 tariff_revenue；应按实现解释。</text>
+<text x="56.0" y="1613.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">⑥ global_exogenous_emissions 在温度函数中用作外生强迫项，不应直接等同于工业碳排放。</text>
+<text x="56.0" y="1637.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">⑦ 活动模块不负责 PPO 更新，也不执行提案 / 接受逻辑；它接收策略已经选好的经济动作。</text>
+<text x="40" y="1748" font-family="Microsoft YaHei,Arial,sans-serif" font-size="14" font-weight="normal" fill="#25364b">蓝：代码 / 函数    绿：参数 / 结果    黄：执行步骤    紫：说明    箭头：调用或数据流</text>
+</svg>

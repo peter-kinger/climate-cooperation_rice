@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1290" viewBox="0 0 1440 1290">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#68788b" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<path d="M720.0,210.0 L720.0,260.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M720.0,365.0 L720.0,390.0 L240.0,390.0 L240.0,445.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="483.0" y="370.0" width="41" height="19" fill="white" />
+<text x="486.0" y="384.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">false</text>
+<path d="M720.0,365.0 L720.0,390.0 L720.0,445.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="723.0" y="397.5" width="95" height="19" fill="white" />
+<text x="726.0" y="411.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">true / 余数 1</text>
+<path d="M720.0,365.0 L720.0,390.0 L1200.0,390.0 L1200.0,445.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="963.0" y="370.0" width="95" height="19" fill="white" />
+<text x="966.0" y="384.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">true / 余数 2</text>
+<path d="M720.0,545.0 L720.0,590.0 L1000.0,590.0 L1000.0,630.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M1200.0,545.0 L1200.0,590.0 L1000.0,590.0 L1000.0,630.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M240.0,545.0 L240.0,590.0 L340.0,590.0 L340.0,630.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M470,365 L470,390 L470,610 L340,610 L340,630" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M1000.0,730.0 L1000.0,815.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M340.0,755.0 L340.0,840.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<text x="40.0" y="38.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" font-weight="bold" fill="#25364b">03 / 谈判开关与环境步进</text>
+<text x="40.0" y="88.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">谈判开关代表有 / 无基础双边谈判，不是两种谈判协议之间的选择器。</text>
+<rect x="420.0" y="125.0" width="600.0" height="85.0" rx="10" fill="#eaf7ef" stroke="#62a37c" stroke-width="1.4" />
+<text x="436.0" y="161.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">configs/cpu.yaml → env.negotiation_on</text>
+<text x="436.0" y="185.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">构造 Rice 时决定动作 / 观察维度与 episode_length</text>
+<rect x="420.0" y="260.0" width="600.0" height="105.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="436.0" y="294.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">Rice.step(actions)  / rice.py:345</text>
+<text x="436.0" y="318.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">timestep += 1；复制上一状态（奖励除外）</text>
+<text x="436.0" y="342.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">negotiation_on 为真时：stage = timestep % 3</text>
+<rect x="40.0" y="445.0" width="400.0" height="100.0" rx="10" fill="#fff0ea" stroke="#c7836b" stroke-width="1.4" />
+<text x="56.0" y="477.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">negotiation_on = false</text>
+<text x="56.0" y="501.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">每一步直接进入活动模块</text>
+<text x="56.0" y="525.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">20 个环境步骤 = 20 个经济周期</text>
+<rect x="520.0" y="445.0" width="400.0" height="100.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="536.0" y="477.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">true 且 stage == 1</text>
+<text x="536.0" y="501.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">proposal_step() / rice.py:535</text>
+<text x="536.0" y="525.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">提出自身承诺与对方减排要求</text>
+<rect x="1000.0" y="445.0" width="400.0" height="100.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="1016.0" y="477.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">true 且 stage == 2</text>
+<text x="1016.0" y="501.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">evaluation_step() / rice.py:584</text>
+<text x="1016.0" y="525.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">接受 / 拒绝；更新最低减排率</text>
+<rect x="760.0" y="630.0" width="480.0" height="100.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="776.0" y="662.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">谈判步骤返回</text>
+<text x="776.0" y="686.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">新观察；各地区 reward = 0；done = false</text>
+<text x="776.0" y="710.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">年份与 activity_timestep 均不推进</text>
+<rect x="40.0" y="630.0" width="600.0" height="125.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="56.0" y="662.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">climate_and_economy_simulation_step()</text>
+<text x="56.0" y="686.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">false：每次调用；true：stage == 0 时调用</text>
+<text x="56.0" y="710.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">activity_timestep += 1；更新气候经济</text>
+<text x="56.0" y="734.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">current_year += 5；reward = 当期效用</text>
+<rect x="760.0" y="815.0" width="480.0" height="105.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="776.0" y="849.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">generate_action_mask() / rice.py:505</text>
+<text x="776.0" y="873.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">把低于最低减排要求的动作设为无效</text>
+<text x="776.0" y="897.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">MaskedModel.forward() 屏蔽对应 logits</text>
+<rect x="40.0" y="840.0" width="600.0" height="95.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="56.0" y="869.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">generate_observation()；返回奖励与 done</text>
+<text x="56.0" y="893.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">到达 2115 年时回合结束</text>
+<text x="56.0" y="917.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">未结束则策略根据新观察选择下一步动作</text>
+<rect x="40.0" y="1040.0" width="1360.0" height="145.0" rx="10" fill="#f4f2f8" stroke="#9a8fb0" stroke-width="1.4" />
+<text x="56.0" y="1082.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">时间顺序：提案（1）→ 接受 / 拒绝（2）→ 气候经济活动（0）→ 下一周期提案。</text>
+<text x="56.0" y="1106.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">开启谈判：60 个环境步骤，仍只有 20 个经济周期；谈判步骤本身不推进年份。</text>
+<text x="56.0" y="1130.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">接受多个协议时，地区最低减排率取相关已接受承诺 / 要求的最大值；执行依靠动作掩码。</text>
+<text x="56.0" y="1154.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">切换谈判开关后需重新训练，因为动作与观察维度发生变化。</text>
+<text x="40" y="1268" font-family="Microsoft YaHei,Arial,sans-serif" font-size="14" font-weight="normal" fill="#25364b">蓝：代码 / 函数    绿：参数 / 结果    黄：执行步骤    紫：说明    箭头：调用或数据流</text>
+</svg>

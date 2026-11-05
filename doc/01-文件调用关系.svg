@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1150" viewBox="0 0 1440 1150">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#68788b" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<path d="M710.0,225.0 L710.0,255.0 L240.0,255.0 L240.0,295.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M710.0,225.0 L710.0,255.0 L720.0,255.0 L720.0,295.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M710.0,225.0 L710.0,255.0 L1200.0,255.0 L1200.0,295.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M240.0,395.0 L240.0,460.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M720.0,395.0 L720.0,460.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M440.0,515.0 L520.0,515.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M720.0,570.0 L720.0,645.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M720.0,755.0 L720.0,820.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M440.0,875.0 L520.0,875.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M920.0,515.0 L1000.0,515.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="6 4" />
+<path d="M240.0,645.0 L240.0,570.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="6 4" />
+<rect x="243.0" y="587.5" width="58" height="19" fill="white" />
+<text x="246.0" y="601.5" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">训练配置</text>
+<path d="M240.0,570.0 L240.0,605.0 L1200.0,605.0 L1200.0,570.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="723.0" y="585.0" width="84" height="19" fill="white" />
+<text x="726.0" y="599.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">注册共享模型</text>
+<path d="M920.0,345.0 L960.0,345.0 L960.0,875.0 L1000.0,875.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="963.0" y="590.0" width="84" height="19" fill="white" />
+<text x="966.0" y="604.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">写入评估结果</text>
+<path d="M1400.0,875.0 L1420.0,875.0 L1420.0,345.0 L1400.0,345.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<path d="M1200.0,460.0 L1200.0,425.0 L720.0,425.0 L720.0,460.0" fill="none" stroke="#68788b" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="963.0" y="405.0" width="126" height="19" fill="white" />
+<text x="966.0" y="419.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" font-weight="normal" fill="#25364b">动作（RLlib 驱动）</text>
+<text x="40.0" y="38.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" font-weight="bold" fill="#25364b">01 / 文件调用关系</text>
+<text x="40.0" y="88.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">当前分支：rllib-cpu-standalone；一套 Rice 模型，RLlib 接口负责适配，不是另一套气候模型。</text>
+<rect x="490.0" y="125.0" width="440.0" height="100.0" rx="10" fill="#fff5df" stroke="#c69a46" stroke-width="1.4" />
+<text x="506.0" y="169.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">run_all.ps1</text>
+<text x="506.0" y="193.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">uv 环境检查 → 测试 → 训练 → 评估 → 绘图</text>
+<rect x="40.0" y="295.0" width="400.0" height="100.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="56.0" y="327.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/train.py : main()</text>
+<text x="56.0" y="351.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">读取配置；循环 algo.train()</text>
+<text x="56.0" y="375.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">记录指标；保存 checkpoint</text>
+<rect x="520.0" y="295.0" width="400.0" height="100.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="536.0" y="327.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/evaluate.py : main()</text>
+<text x="536.0" y="351.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">Algorithm.from_checkpoint()</text>
+<text x="536.0" y="375.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">加载策略；逐回合推理；导出轨迹</text>
+<rect x="1000.0" y="295.0" width="400.0" height="100.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="1016.0" y="327.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/plot.py : main()</text>
+<text x="1016.0" y="351.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">只读取 CSV；无需启动 Ray</text>
+<text x="1016.0" y="375.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">生成全球 / 地区 / 训练图</text>
+<rect x="40.0" y="460.0" width="400.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="56.0" y="497.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/runtime.py</text>
+<text x="56.0" y="521.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">setup()：注册环境、模型，启动 CPU Ray</text>
+<text x="56.0" y="545.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">build()：PPOConfig → 算法实例</text>
+<rect x="520.0" y="460.0" width="400.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="536.0" y="497.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/env.py : RiceEnv</text>
+<text x="536.0" y="521.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">持有 self.env = Rice(...)</text>
+<text x="536.0" y="545.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">适配 reset / step 与观察空间</text>
+<rect x="1000.0" y="460.0" width="400.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="1016.0" y="497.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rllib_cpu/model.py : MaskedModel</text>
+<text x="1016.0" y="521.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">forward() / value_function()</text>
+<text x="1016.0" y="545.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">共享 actor / critic；应用动作掩码</text>
+<rect x="520.0" y="645.0" width="400.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="536.0" y="682.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rice.py : Rice</text>
+<text x="536.0" y="706.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">reset / step / proposal / evaluation</text>
+<text x="536.0" y="730.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">气候经济模拟；生成观察与动作掩码</text>
+<rect x="520.0" y="820.0" width="400.0" height="110.0" rx="10" fill="#eef4ff" stroke="#6385bd" stroke-width="1.4" />
+<text x="536.0" y="857.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">rice_helpers.py</text>
+<text x="536.0" y="881.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">set_rice_params()：读取参数</text>
+<text x="536.0" y="905.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">get_*()：生产、贸易、气候等公式</text>
+<rect x="40.0" y="645.0" width="400.0" height="110.0" rx="10" fill="#eaf7ef" stroke="#62a37c" stroke-width="1.4" />
+<text x="56.0" y="682.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">configs/cpu.yaml</text>
+<text x="56.0" y="706.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">训练次数、种子、PPO 参数</text>
+<text x="56.0" y="730.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">env.negotiation_on：谈判开关</text>
+<rect x="40.0" y="820.0" width="400.0" height="110.0" rx="10" fill="#eaf7ef" stroke="#62a37c" stroke-width="1.4" />
+<text x="56.0" y="857.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">region_yamls/</text>
+<text x="56.0" y="881.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">default.yml：全球 / 地区默认参数</text>
+<text x="56.0" y="905.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">27 个地区文件：覆盖地区默认值</text>
+<rect x="1000.0" y="820.0" width="400.0" height="110.0" rx="10" fill="#eaf7ef" stroke="#62a37c" stroke-width="1.4" />
+<text x="1016.0" y="857.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">runs/&lt;实验名&gt;/</text>
+<text x="1016.0" y="881.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">config.yaml / checkpoint / training.csv</text>
+<text x="1016.0" y="905.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">evaluation.csv / regions.csv / PNG</text>
+<rect x="40.0" y="990.0" width="1360.0" height="80.0" rx="10" fill="#f4f2f8" stroke="#9a8fb0" stroke-width="1.4" />
+<text x="56.0" y="1024.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="bold" fill="#25364b">阅读顺序：配置 → Rice 参数加载 → Rice.step() → 活动模块 → RLlib 训练与评估。</text>
+<text x="56.0" y="1048.0" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" font-weight="normal" fill="#25364b">评估调用 setup() 注册环境和模型，再从检查点恢复算法；不会调用 build() 从零建立训练实验。</text>
+<text x="40" y="1128" font-family="Microsoft YaHei,Arial,sans-serif" font-size="14" font-weight="normal" fill="#25364b">蓝：代码 / 函数    绿：参数 / 结果    黄：执行步骤    紫：说明    箭头：调用或数据流</text>
+</svg>
