@@ -371,6 +371,7 @@ class Rice:
                 return self.proposal_step(actions)
 
             if self.stage == 2:
+                # 作者收集该地区参与的已接受协议
                 return self.evaluation_step(actions)
 
         return self.climate_and_economy_simulation_step(actions)
@@ -609,6 +610,7 @@ class Rice:
                 for region_id in range(self.num_regions)
             ]
         )
+        
         # Force set the evaluation for own proposal to reject
         for region_id in range(self.num_regions):
             proposal_decisions[region_id, region_id] = 0

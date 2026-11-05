@@ -1,0 +1,401 @@
+<mxfile host="65bd71144e">
+    <diagram id="01-文件调用关系" name="01-文件调用关系">
+        <mxGraphModel dx="3492" dy="2299" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1150" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=28;fontFamily=Microsoft YaHei;fontColor=#25364b;fontStyle=1" value=" rice-n 原始文章逻辑" vertex="1">
+                    <mxGeometry height="40" width="350" x="-470" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-9" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-1" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-24" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-1" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;rice_helper.py&lt;br&gt;读取相关参数&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="-40" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-2" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=28;fontFamily=Microsoft YaHei;fontColor=#25364b;fontStyle=1" value=" rice-n 整理后代码逻辑" vertex="1">
+                    <mxGeometry height="40" width="1360" x="-420" y="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-8" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-3" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="AH7R_pVm4M-zdclb_sHe-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;region_yamls&amp;nbsp;&lt;br&gt;配置区域化参数（很多个）&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="60" width="210" x="-320" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-15" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-4" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;强化学习策略&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="650" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-10" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-5" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;rice.py 环境&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="90" x="130" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-11" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-6" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;rllib.yaml&lt;br&gt;算法配置的相关参数&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="210" x="330" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-12" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-7" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;train_rllib.py 训练主程序&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="210" x="350" y="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-16" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-13" style="edgeStyle=none;html=1;" target="AH7R_pVm4M-zdclb_sHe-14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;保存结果&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="890" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;提交 评估&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); font-family: monospace;&quot;&gt;create_submission_zip.py&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); font-size: 16px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="290" x="1130" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value=" " vertex="1">
+                    <mxGeometry height="400" width="530" x="290" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-19" parent="1" style="text;whiteSpace=wrap;html=1;fontStyle=1" value="&lt;span style=&quot;color: rgb(37, 54, 75); font-family: &amp;quot;Microsoft YaHei&amp;quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;可替换包装多种环境，如 rllib,cuda,c&lt;/font&gt;&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="30" width="340" x="300" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 17px;&quot;&gt;无谈判：&lt;br&gt;step 1：proposal_step()                         提案&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 17px;&quot;&gt;step 2：evaluation_step()                       接受或拒绝&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 17px;&quot;&gt;step 3：climate_and_economy_simulation_step()    经济与气候&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 17px;&quot;&gt;step 4：proposal_step()&lt;/span&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="190" width="610" x="490" y="-345" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-22" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-5" style="edgeStyle=none;html=1;entryX=0.493;entryY=0.889;entryDx=0;entryDy=0;entryPerimeter=0;" target="AH7R_pVm4M-zdclb_sHe-21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(63, 63, 63); font-size: 17px; text-align: left;&quot;&gt;具体的计算公式&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="60" width="350" x="-150" y="-280" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 17px;&quot;&gt;有谈判&lt;/span&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="190" width="420" x="390" y="-620" as="geometry"/>
+                </mxCell>
+                <mxCell id="AH7R_pVm4M-zdclb_sHe-26" edge="1" parent="1" source="AH7R_pVm4M-zdclb_sHe-5" style="edgeStyle=none;html=1;entryX=-0.01;entryY=0.358;entryDx=0;entryDy=0;entryPerimeter=0;" target="AH7R_pVm4M-zdclb_sHe-25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="02-运行与结果流" name="02-运行与结果流">
+        <mxGraphModel dx="2360" dy="1322" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1370" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=28;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="02 / 从运行到评估绘图" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="命令需在项目根目录执行；以下命令均使用 uv run python -m rllib_cpu.&lt;模块&gt;。" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-4" edge="1" parent="1" source="tr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="t1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-5" edge="1" parent="1" source="t1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="t2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-6" edge="1" parent="1" source="t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="t3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-7" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="t4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-8" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="t5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-9" edge="1" parent="1" source="ev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="e1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-10" edge="1" parent="1" source="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="e2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-11" edge="1" parent="1" source="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="e3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-12" edge="1" parent="1" source="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="e4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-13" edge="1" parent="1" source="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="e5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-14" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" target="e2" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="475" y="827"/>
+                            <mxPoint x="475" y="457"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-15" edge="1" parent="1" source="pl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-16" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-17" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-18" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="tr" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="训练进程 / train" vertex="1">
+                    <mxGeometry height="60" width="400" x="40" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="ev" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="独立加载进程 / evaluate" vertex="1">
+                    <mxGeometry height="60" width="400" x="520" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="pl" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="结果分析进程 / plot" vertex="1">
+                    <mxGeometry height="60" width="400" x="1000" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="t1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="train.main()&#xa;读取 configs/cpu.yaml 与 CLI 覆盖项&#xa;创建全新的 runs/&lt;实验名&gt; 目录" vertex="1">
+                    <mxGeometry height="105" width="400" x="40" y="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="t2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="runtime.setup() + build()&#xa;启动 CPU Ray；注册 RiceEnv / 模型&#xa;共享 regions 策略；GPU 数量 = 0" vertex="1">
+                    <mxGeometry height="105" width="400" x="40" y="405" as="geometry"/>
+                </mxCell>
+                <mxCell id="t3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="algo.train()：循环 iterations 次&#xa;观察 → 共享策略动作 → env.step()&#xa;采样批量 → PPO 更新参数&#xa;写入 training.csv" vertex="1">
+                    <mxGeometry height="130" width="400" x="40" y="575" as="geometry"/>
+                </mxCell>
+                <mxCell id="t4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eaf7ef;strokeColor=#62a37c;fontColor=#25364b;" value="algo.save()&#xa;保存完整 checkpoint/&#xa;保存实际 config.yaml 与路径提示" vertex="1">
+                    <mxGeometry height="105" width="400" x="40" y="775" as="geometry"/>
+                </mxCell>
+                <mxCell id="t5" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="finally&#xa;algo.stop()；ray.shutdown()" vertex="1">
+                    <mxGeometry height="90" width="400" x="40" y="945" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="evaluate.main()&#xa;读取 runs/&lt;实验名&gt;/config.yaml&#xa;setup() 注册环境和模型" vertex="1">
+                    <mxGeometry height="105" width="400" x="520" y="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="Algorithm.from_checkpoint()&#xa;从 runs/&lt;实验名&gt;/checkpoint 恢复&#xa;不更新策略参数" vertex="1">
+                    <mxGeometry height="105" width="400" x="520" y="405" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="每个评估回合&#xa;RiceEnv.reset() → compute_single_action()&#xa;→ RiceEnv.step() → 直到 terminated&#xa;默认 explore=False；可加 --explore" vertex="1">
+                    <mxGeometry height="130" width="400" x="520" y="575" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="提取 global_state；检查有限数值&#xa;原始轨迹：trajectory_*.npz&#xa;按 activity_timestep 筛出经济年份&#xa;谈判中间步骤不当作新增年份" vertex="1">
+                    <mxGeometry height="130" width="400" x="520" y="775" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eaf7ef;strokeColor=#62a37c;fontColor=#25364b;" value="导出评估结果；关闭算法和 Ray&#xa;evaluation.csv：全球年度结果&#xa;regions.csv；summary.json" vertex="1">
+                    <mxGeometry height="105" width="400" x="520" y="975" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="plot.main()&#xa;读取 evaluation.csv&#xa;按年份聚合并绘制全球六面板" vertex="1">
+                    <mxGeometry height="105" width="400" x="1000" y="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="读取 regions.csv&#xa;按地区 / 年份聚合&#xa;绘制各地区减排曲线" vertex="1">
+                    <mxGeometry height="105" width="400" x="1000" y="405" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="读取 training.csv&#xa;绘制平均回合奖励曲线&#xa;只有一次迭代时，仅有一个训练点" vertex="1">
+                    <mxGeometry height="130" width="400" x="1000" y="575" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eaf7ef;strokeColor=#62a37c;fontColor=#25364b;" value="三张 PNG&#xa;analysis.png&#xa;regional_mitigation.png&#xa;training.png" vertex="1">
+                    <mxGeometry height="130" width="400" x="1000" y="775" as="geometry"/>
+                </mxCell>
+                <mxCell id="commands" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#f4f2f8;strokeColor=#9a8fb0;fontColor=#25364b;" value="逐步运行：&#xa;uv run python -m rllib_cpu.train --iterations 1 --output runs/my-run&#xa;uv run python -m rllib_cpu.evaluate --run runs/my-run --episodes 1&#xa;uv run python -m rllib_cpu.plot --run runs/my-run&#xa;一键运行：powershell -ExecutionPolicy Bypass -File .\run_all.ps1 -RunDir runs/my-run -Iterations 1" vertex="1">
+                    <mxGeometry height="145" width="1360" x="40" y="1140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="03-谈判与步进" name="03-谈判与步进">
+        <mxGraphModel dx="2178" dy="1220" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1290" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=28;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="03 / 谈判开关与环境步进" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="谈判开关代表有 / 无基础双边谈判，不是两种谈判协议之间的选择器。" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-4" edge="1" parent="1" source="config" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="step" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-5" edge="1" parent="1" source="step" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="off" value="false">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="390"/>
+                            <mxPoint x="240" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-6" edge="1" parent="1" source="step" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="proposal" value="true / 余数 1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-7" edge="1" parent="1" source="step" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="accept" value="true / 余数 2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="390"/>
+                            <mxPoint x="1200" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-8" edge="1" parent="1" source="proposal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="talkreturn" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="590"/>
+                            <mxPoint x="1000" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-9" edge="1" parent="1" source="accept" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="talkreturn" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1200" y="590"/>
+                            <mxPoint x="1000" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-10" edge="1" parent="1" source="off" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="activity" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="240" y="590"/>
+                            <mxPoint x="340" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="connector-11" edge="1" parent="1" source="step" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.0833333333;exitY=1;entryX=0.5;entryY=0;" target="activity" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-12" edge="1" parent="1" source="talkreturn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mask" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-13" edge="1" parent="1" source="activity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="return" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="config" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eaf7ef;strokeColor=#62a37c;fontColor=#25364b;" value="configs/cpu.yaml → env.negotiation_on&#xa;构造 Rice 时决定动作 / 观察维度与 episode_length" vertex="1">
+                    <mxGeometry height="85" width="600" x="420" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="step" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="Rice.step(actions)  / rice.py:345&#xa;timestep += 1；复制上一状态（奖励除外）&#xa;negotiation_on 为真时：stage = timestep % 3" vertex="1">
+                    <mxGeometry height="105" width="600" x="420" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="off" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff0ea;strokeColor=#c7836b;fontColor=#25364b;" value="negotiation_on = false&#xa;每一步直接进入活动模块&#xa;20 个环境步骤 = 20 个经济周期" vertex="1">
+                    <mxGeometry height="100" width="400" x="40" y="445" as="geometry"/>
+                </mxCell>
+                <mxCell id="proposal" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="true 且 stage == 1&#xa;proposal_step() / rice.py:535&#xa;提出自身承诺与对方减排要求" vertex="1">
+                    <mxGeometry height="100" width="400" x="520" y="445" as="geometry"/>
+                </mxCell>
+                <mxCell id="accept" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="true 且 stage == 2&#xa;evaluation_step() / rice.py:584&#xa;接受 / 拒绝；更新最低减排率" vertex="1">
+                    <mxGeometry height="100" width="400" x="1000" y="445" as="geometry"/>
+                </mxCell>
+                <mxCell id="talkreturn" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="谈判步骤返回&#xa;新观察；各地区 reward = 0；done = false&#xa;年份与 activity_timestep 均不推进" vertex="1">
+                    <mxGeometry height="100" width="480" x="760" y="630" as="geometry"/>
+                </mxCell>
+                <mxCell id="activity" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="climate_and_economy_simulation_step()&#xa;false：每次调用；true：stage == 0 时调用&#xa;activity_timestep += 1；更新气候经济&#xa;current_year += 5；reward = 当期效用" vertex="1">
+                    <mxGeometry height="125" width="600" x="40" y="630" as="geometry"/>
+                </mxCell>
+                <mxCell id="mask" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="generate_action_mask() / rice.py:505&#xa;把低于最低减排要求的动作设为无效&#xa;MaskedModel.forward() 屏蔽对应 logits" vertex="1">
+                    <mxGeometry height="105" width="480" x="760" y="815" as="geometry"/>
+                </mxCell>
+                <mxCell id="return" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="generate_observation()；返回奖励与 done&#xa;到达 2115 年时回合结束&#xa;未结束则策略根据新观察选择下一步动作" vertex="1">
+                    <mxGeometry height="95" width="600" x="40" y="840" as="geometry"/>
+                </mxCell>
+                <mxCell id="notes" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#f4f2f8;strokeColor=#9a8fb0;fontColor=#25364b;" value="时间顺序：提案（1）→ 接受 / 拒绝（2）→ 气候经济活动（0）→ 下一周期提案。&#xa;开启谈判：60 个环境步骤，仍只有 20 个经济周期；谈判步骤本身不推进年份。&#xa;接受多个协议时，地区最低减排率取相关已接受承诺 / 要求的最大值；执行依靠动作掩码。&#xa;切换谈判开关后需重新训练，因为动作与观察维度发生变化。" vertex="1">
+                    <mxGeometry height="145" width="1360" x="40" y="1040" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="04-活动模块与论文对应" name="04-活动模块与论文对应">
+        <mxGraphModel dx="3078" dy="1724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1770" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=28;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="04 / 论文 Activity Component → 实际函数" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" parent="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontFamily=Microsoft YaHei;fontColor=#25364b;" value="主体：rice.py:650 climate_and_economy_simulation_step()；右列为 rice_helpers.py 中的公式函数。" vertex="1">
+                    <mxGeometry height="40" width="1360" x="40" y="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-4" edge="1" parent="1" source="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a1h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-5" edge="1" parent="1" source="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a2h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-6" edge="1" parent="1" source="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-7" edge="1" parent="1" source="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a3h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-8" edge="1" parent="1" source="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-9" edge="1" parent="1" source="a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a4h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-10" edge="1" parent="1" source="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a4" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-11" edge="1" parent="1" source="a5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a5h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-12" edge="1" parent="1" source="a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-13" edge="1" parent="1" source="a6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a6h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-14" edge="1" parent="1" source="a5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-15" edge="1" parent="1" source="a7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="a7h" value="对应">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="connector-16" edge="1" parent="1" source="a6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#68788b;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="a7" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="0. 输入与时钟 / rice.py:657–763&#xa;activity_timestep += 1；解析储蓄、减排、贸易动作&#xa;读取旧状态；生成外生强迫与土地排放" vertex="1">
+                    <mxGeometry height="110" width="780" x="40" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="get_exogenous_emissions() : 62&#xa;get_land_emissions() : 67" vertex="1">
+                    <mxGeometry height="110" width="500" x="900" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="1. 各地区生产与进口预算 / 765–881&#xa;减排成本系数 → 气候损失保留系数 → 减排成本比例&#xa;生产 → 可用产出 → 投资；账户先计息&#xa;按本地区产出与债务约束缩减进口需求" vertex="1">
+                    <mxGeometry height="145" width="780" x="40" y="295" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="get_mitigation_cost() : 57&#xa;get_damages() : 77；get_abatement_cost() : 82&#xa;get_production() : 72；get_gross_output() : 87&#xa;get_investment() : 93" vertex="1">
+                    <mxGeometry height="145" width="500" x="900" y="295" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="2. 按出口方供给缩减贸易 / 883–908&#xa;最大出口 = min(出口比例 × 产出, 产出 − 投资)&#xa;超过出口能力时，按比例缩减进口矩阵的对应列" vertex="1">
+                    <mxGeometry height="110" width="780" x="40" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eaf7ef;strokeColor=#62a37c;fontColor=#25364b;" value="get_max_potential_exports() : 105&#xa;进口矩阵 X[i,j]：i 从 j 进口&#xa;行和 = 进口；列和 = 出口" vertex="1">
+                    <mxGeometry height="110" width="500" x="900" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="3. 消费、效用与账户 / 911–1011&#xa;此前关税 → 进口消费品与税收记录&#xa;国内消费 = 产出 − 投资 − 出口&#xa;国内 / 国外商品聚合 → 效用；reward = utility&#xa;计息余额 + 年长 × (出口 − 进口)" vertex="1">
+                    <mxGeometry height="145" width="780" x="40" y="670" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="get_consumption() : 98&#xa;get_armington_agg() : 174&#xa;get_utility() : 160&#xa;get_social_welfare() : 169" vertex="1">
+                    <mxGeometry height="145" width="500" x="900" y="670" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="4. 更新全球气候 / 1013–1072&#xa;旧温度 + 旧碳储量 + 外生强迫 → 新温度&#xa;各地区排放 = 旧强度 × (1 − 减排率) × 生产 + 土地排放&#xa;旧碳储量 + 所有地区排放 → 新碳储量" vertex="1">
+                    <mxGeometry height="120" width="780" x="40" y="875" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="get_global_temperature() : 117&#xa;get_aux_m() : 126&#xa;get_global_carbon_mass() : 131" vertex="1">
+                    <mxGeometry height="120" width="500" x="900" y="875" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="5. 更新下一期生产条件 / 1074–1149&#xa;资本折旧 + 本期投资 → 新资本&#xa;人口增长方程 → 新人口&#xa;生产率增长路径 → 新生产率&#xa;排放强度变化路径 → 新排放强度" vertex="1">
+                    <mxGeometry height="140" width="780" x="40" y="1055" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="get_capital_depreciation() : 112&#xa;get_capital() : 136；get_labor() : 141&#xa;get_production_factor() : 146&#xa;get_carbon_intensity() : 153" vertex="1">
+                    <mxGeometry height="140" width="500" x="900" y="1055" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#fff5df;strokeColor=#c69a46;fontColor=#25364b;" value="6. 保存并返回 / 1151–1168&#xa;保存本次关税供后续使用；生成新观察&#xa;current_year += xDelta；返回 obs, reward, done, info" vertex="1">
+                    <mxGeometry height="110" width="780" x="40" y="1255" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7h" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=16;fontSize=16;fontFamily=Microsoft YaHei;fillColor=#eef4ff;strokeColor=#6385bd;fontColor=#25364b;" value="generate_observation() / rice.py:378&#xa;set_global_state() / rice.py:1170&#xa;get_global_state() / rice.py:1221" vertex="1">
+                    <mxGeometry height="110" width="500" x="900" y="1255" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
